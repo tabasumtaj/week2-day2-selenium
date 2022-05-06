@@ -18,17 +18,18 @@ public class FindAccount {
 		driver.findElement(By.className("decorativeSubmit")).click();
 		driver.findElement(By.linkText("CRM/SFA")).click();
 		driver.findElement(By.linkText("Accounts")).click();
-	
-		//driver.findElement(By.LinkText("Create")).click();
+		//a[@class='selected']
 		driver.findElement(By.xpath("//a[contains(text (),'Find')]")).click();
 		driver.findElement(By.xpath("(//input[@name='accountName'])[2]")).sendKeys("Credit Limited Account");
 		driver.findElement(By.xpath("(//button[contains(text(),'Find')])[1]")).click();
 		//.findElement(By.name("accountName")).getText();
-      
-
-		System.out.println(driver.findElement(By.xpath("(//input[@name='accountName'])[2]")).getAttribute(""));
+       String text = driver.findElement(By.xpath("(//input[@name='accountName'])[2]")).getText();
+       
+       System.out.println("----text"+text);
+	//	System.out.println("---"+driver.findElement(By.xpath("(//input[@name='accountName'])[2]")).getAttribute(""));
 		
-		//        driver.close();
+		String title = driver.getTitle();
+		System.out.println("--title"+title);
 		
 	}
  

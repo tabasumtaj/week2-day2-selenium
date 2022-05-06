@@ -23,7 +23,7 @@ public class LoginPage {
 	    	System.out.println("title--ACME");
 	    }else
 	    {
-	    	System.out.println(" not title--");
+	    	System.out.println("title not found");
 	    }
 	    System.out.println("title----"+driver.getTitle());
        driver.findElement(By.xpath("//a[contains(text(),'Log')]")).click();
